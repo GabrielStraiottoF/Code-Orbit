@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Beauty AI Chat</title>
+</head>
+
+<body class="chat-body">
+    <div class="chat-container">
+
+        <header>
+            <h2>✨ Beauty Advisor AI</h2>
+            <p>Como posso cuidar da sua pele hoje?</p>
+        </header>
+
+        <div id="chat-box" class="chat-box"></div>
+
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Digite sua pergunta...">
+            <button onclick="sendMessage()">➤</button>
+        </div>
+
+    </div>
+
+<script>
+const input = document.getElementById('user-input');
+const chatBox = document.getElementById('chat-box');
+input.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") sendMessage();
+});
+function addMessage(text, type) {
+    const div = document.createElement("div");
+    div.classList.add("msg", type);
+    div.innerHTML = text.replace(/\n/g, "<br>");
+
+    chatBox.appendChild(div);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+function showTyping() {
+    const typing = document.createElement("div");
+    typing.classList.add("msg", "ai");
+    typing.id = "typing";
+    typing.innerHTML = "Beauty AI está digitando...";
+    chatBox.appendChild(typing);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+function removeTyping() {
+    const typing = document.getElementById("typing");
+    if (typing) typing.remove();
+}
+async function sendMessage() {
+    if (!input.value) return;
+
+    const userText = input.value;
+    addMessage("<b>Você</b><br>" + userText, "user");
+    input.value = "";
+
+    showTyping();
+
+    const response = await fetch('/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: userText })
+    });
+
+    const data = await response.json();
+
+    removeTyping();
+
+    addMessage("<b>Beauty AI</b><br>" + data.response, "ai");
+}
+</script>
+
+</body>
+</html>
