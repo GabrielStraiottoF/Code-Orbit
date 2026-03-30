@@ -1,0 +1,83 @@
+[33mcommit 1bd6baba8d90609c3a49079323f1bbfe32ad6fb5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mstraiotto[m[33m, [m[1;31morigin/straiotto[m[33m)[m
+Author: GabrielStraiottoF <gabrielstraiotto7@gmail.com>
+Date:   Thu Mar 26 20:58:24 2026 -0300
+
+    versão atualizada
+
+[33mcommit cb220c8468f524b4695fb11a8a7a6dbfaff8922e[m
+Author: GabrielStraiottoF <gabrielstraiotto7@gmail.com>
+Date:   Thu Mar 26 20:56:54 2026 -0300
+
+    Delete app.py
+
+[33mcommit 8227f473c7a5ea772bc9a15eb42430663557cb82[m
+Author: GabrielStraiottoF <gabrielstraiotto7@gmail.com>
+Date:   Thu Mar 26 20:56:45 2026 -0300
+
+    Delete registro.html
+
+[33mcommit 33e1f6864cc8320cb292389da25260b594fa5b3b[m
+Author: GabrielStraiottoF <gabrielstraiotto7@gmail.com>
+Date:   Thu Mar 26 20:56:09 2026 -0300
+
+    Delete requirements.txt
+
+[33mcommit 85aeb4ad6594546295bd1445f3f8435145fe4d89[m
+Author: GabrielStraiottoF <gabrielstraiotto7@gmail.com>
+Date:   Thu Mar 26 20:56:00 2026 -0300
+
+    Delete style.css
+
+[33mcommit 31abc50bcc6abca35d12c1ec5258bd19a11420c9[m
+Author: GabrielStraiottoF <gabrielstraiotto7@gmail.com>
+Date:   Thu Mar 26 20:55:52 2026 -0300
+
+    Delete sucesso.html
+
+[33mcommit 8892cd4d6883876839b7ceade1c1a9c6b88f1970[m
+Author: GabrielStraiottoF <gabrielstraiotto7@gmail.com>
+Date:   Thu Mar 26 14:12:42 2026 -0300
+
+    Delete schemas.py
+
+[33mcommit ff417fa2bd80f9b8d23ceeb4bfae1fbecb328710[m
+Author: GabrielStraiottoF <gabrielstraiotto7@gmail.com>
+Date:   Thu Mar 26 14:12:20 2026 -0300
+
+    Delete models.py
+
+[33mcommit 8f8006e02f0ca22eb1bd95278b138ce72f0f1f33[m
+Author: GabrielStraiottoF <gabrielstraiotto7@gmail.com>
+Date:   Thu Mar 26 14:12:09 2026 -0300
+
+    Delete main.py
+
+[33mcommit 22710be92f6f84d6032d2da6245ef9e751aedc13[m
+Author: GabrielStraiottoF <gabrielstraiotto7@gmail.com>
+Date:   Thu Mar 26 14:12:01 2026 -0300
+
+    Delete database.py
+
+[33mcommit b89acad6956dcc4c3714e6110ca85a1b34a37591[m
+Author: GabrielStraiottoF <gabrielstraiotto7@gmail.com>
+Date:   Thu Mar 26 14:11:20 2026 -0300
+
+    teste
+
+[33mcommit 90428afbf1d4f44197ddc38036945a041fb35dad[m
+Author: GabrielStraiottoF <gabrielstraiotto7@gmail.com>
+Date:   Wed Mar 25 21:44:26 2026 -0300
+
+    Add files via upload
+
+[33mcommit 1d8d813113d06889efa854c4c3c95c864334ddfc[m
+Author: GabrielStraiottoF <gabrielstraiotto7@gmail.com>
+Date:   Wed Mar 25 21:44:08 2026 -0300
+
+    first project
+
+[33mcommit ddf60595f9c7c466e5b49bd6562ba40da1d7075f[m
+Author: GabrielStraiottoF <gabrielstraiotto7@gmail.com>
+Date:   Wed Mar 25 20:36:42 2026 -0300
+
+    Initial commit

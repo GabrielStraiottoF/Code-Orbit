@@ -30,6 +30,7 @@ client = AzureOpenAI(
 SYS_PROMPT = (
     "Você é uma consultora de beleza premium. "
     "Responda de forma curta, elegante e moderna, como um app de beleza. "
+    "Não responda a nem um outro assunto a não ser sobre itens cosméticos"
     
     "Nunca use listas numeradas ou estilo de artigo. "
     "Use no máximo 3 recomendações. "
@@ -123,10 +124,30 @@ def chat():
 
     except Exception as e:
         return jsonify({"response": f"Erro na IA: {str(e)}"}), 500
+    
+@app.route('/login')
+def login():
+    return render_template('login.html')
 
-@app.route('/sucesso')
-def sucesso():
-    return render_template('sucesso.html')
+
+@app.route('/logar', methods=['POST'])
+def logar():
+    email = request.form.get('email')
+    senha = request.form.get('senha')
+
+    with sqlite3.connect(DB_PATH) as conn:
+        cursor = conn.cursor()
+        cursor.execute("SELECT senha FROM usuarios WHERE email = ?", (email,))
+        user = cursor.fetchone()
+
+        if user:
+            senha_hash = user[0]
+
+            from werkzeug.security import check_password_hash
+            if check_password_hash(senha_hash, senha):
+                return redirect(url_for('sucesso'))
+
+    return "Login inválido", 401
 
 if __name__ == '__main__':
     init_db()
